@@ -1,0 +1,16 @@
+#flex-container {
+    display: flex; 
+    border: 1px solid;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color: lightgrey;
+}
+#boxi1 {
+    margin-left: auto;
+}
+
+
+
+
+
+ 

@@ -1,0 +1,32 @@
+#grid-container { 
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-gap: 1vw;
+    grid-template-areas:
+    "header header  header"
+    "nav    content sidebar"
+    "footer footer  footer"
+    
+}
+
+#grid-container > div {
+    font-size: 2vw;
+    padding: 0.5em;
+    background: gold;
+    text-align: center;
+  }
+
+#grid-item-header {
+    grid-area: header;
+}
+
+
+#ul-1 {
+    list-style: none;
+}
+
+#grid-item-footer {
+    grid-area: footer;
+    
+}
+

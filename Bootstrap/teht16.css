@@ -1,0 +1,15 @@
+
+form {
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+    grid-gap: 16px;
+    background-color: lightgreen;
+}
+label {
+    grid-column: 1 / 2;
+}
+
+input,
+button {
+    grid-column: 2 / 3;
+}
