@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=”stylesheet” href=”/jqueryui/jquery-ui.min.css”>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>  
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title>Document</title>
+<script>
+
+$(document).ready(function (){
+
+    $("#tallenna").click(function () {
+        var etunimi= $('#etunimi').val();
+        var osoite= $('#osoite').val();
+        if(etunimi && osoite){
+            if(etunimi.length>4 && osoite.length>4){
+                $('#tulos').text(etunimi+","+osoite);
+                    return true;
+                }
+            if (etunimi.length<5){
+                $('#virhe').text('Pakollisia tietoja puuttuu: Etunimi on liian lyhyt.');
+                return false;
+            }
+            if (osoite.length<5){
+                $('#virhe').text('Pakollisia tietoja puuttuu: Osoite on liian lyhyt.'); 
+                return false;
+            }
+            else {
+                return false;
+            }
+        }
+        $('#virhe').text('Pakollisia tietoja puuttuu: Etunimi on liian lyhyt. Osoite on liian lyhyt.');
+        return false;
+    });
+
+    $("#lisaa").click(function () {
+        var etunimi= $('#etunimi').val();
+        var osoite= $('#osoite').val();
+        if(etunimi && osoite){
+            if(etunimi.length>4 && osoite.length>4){
+                $('#tulos').text(etunimi+","+osoite);
+                    return true;
+                }
+            if (etunimi.length<5){
+                $('#error').text('Pakollisia tietoja puuttuu: Etunimi on liian lyhyt.');
+                $('#error').fadeOut(3000);
+                return false;
+            }
+            if (osoite.length<5){
+                $('#error').text('Pakollisia tietoja puuttuu: Osoite on liian lyhyt.'); 
+                $('#error').fadeOut(3000);
+                return false;
+            }
+            else {
+                return false;
+            }
+        }
+        $('#error').text('Pakollisia tietoja puuttuu: Etunimi on liian lyhyt. Osoite on liian lyhyt.');
+        $('#error').fadeOut(3000);
+        return false;
+
+     });
+
+
+
+    
+    $("#pvm").datepicker({
+            dateFormat: "dd/mm/yy",
+            maxDate: "31/12/2020",
+            minDate: "01/08/2020",
+            changeYear: true,
+            changeMonth: true
+            
+            
+        });
+
+
+    $("#autoc").autocomplete({
+        source: src="http://codez.savonia.fi/jussi/api/json_data.php"
+
+    },{});
+
+});
+</script>
+</head>
+<body>
+    <form id="lomake">
+        <label id="lbl_etunimi" >Etunimi:</label>
+        <input id="etunimi" type="text" name="etunimi"/>
+    
+        <label id="lbl_osoite" >Osoite:</label>
+        <input id="osoite" type="text"name="email" />
+
+        <p>Results:</p>
+        <select id='results'>
+        <option value="Red">Red</option>
+        <option value="Green">Green</option>
+        <option value="White">White</option>
+        <option value="Black">Black</option>
+        </select>
+    </form><br>
+
+        <button id="tallenna">Tallenna</button>
+        <button id="lisaa">Lisää</button>
+        <p id="virhe" ></p>
+        <p id="tulos" ></p>
+        <p id="error" ></p><br><br>
+
+
+
+    <form>
+        <h1>Datepicker</h1>
+        <input type="text" id="pvm"><br><br>
+
+        <p id="pvm_result" ></p>
+   
+
+    </form>
+
+
+    <form>
+        <h1>Autocomplete</h1>
+        <div id="autocomplete">
+            <label><b>Syötä kaupunki</b></label>
+            <input id="autoc" type="text">
+            
+
+
+        </div>
+
+    </form>
+
+
+       
+</body>
+</html>

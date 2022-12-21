@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      input { display: inline-block; width: 210px; text-align: right; }
+      
+
+  
+    </style>
+</head>
+<body>
+
+<form action="http://codez.savonia.fi/jussi/api/test.php" method="get">
+<table>
+    <tr>
+        <td>
+            <label for="oppilaitos" id="lbl_oppilaitos">Oppilaitos:</label>
+            <input type="text" id="oppilaitos" name="oppilaitos"><br>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="nimi" id="lbl_nimi">Nimi:</label>
+            <input type="text" id="nimi" name="nimi"><br>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="vuosikurssi" id="lbl_vuosikurssi">Vuosikurssi:</label>
+            <input type="password" id="vuosikurssi" name="vuosikurssi"><br>
+        </td>
+    <tr>
+        <td>
+            <label for="kurssi_nimi" id="lbl_kurssin_nimi">Kurssin nimi:</label>
+            <select name="course_value" id="kurssin_nimi" name="course[]">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="kurssi_nimi" id="lbl_kurssin_nimi">Sukupuoli:</label>
+            <select id="kurssin_nimi" name="Sukupuoli">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="asd" id="lbl_kurssin_nimi">Harrastukset:</label>
+            <select id="kurssin_nimi" name="Harrastukset">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for="asd" id="lbl_kurssin_nimi">Oppilaitos:</label>
+            <select id="kurssin_nimi" name="Oppilaitos">
+        </td>
+    </tr>
+</table>
+        <option value="matematiikka">Matematiikka</option>
+        <option value="fysiikka">Fysiikka</option>
+        <option value="kemia">Kemia</option>
+        <option value="tietorakenteet">Tietorakenteet</option>
+        <option value="webohjelmointi">Webohjelmointi</option>
+      </select><br>
+
+
+    <label for="kurssi_tyyppi" id="lbl_kurssin_tyyppi">Kurssin tyyppi:</label>
+    <select  id="kurssin_tyyppi" name="course[]" multiple>
+        <option value="Lahiopetus">Lahiopetus</option>
+        <option value="Etaopetus">Etaopetus</option>
+        <option value="Tukiopetus">Tukiopetus</option>
+      </select>
+
+
+ 
+
+    <br>
+    <input type="radio" id="html" name="sukupuoli" value="Mies">
+    <label for="html">Mies</label><br>
+    <input type="radio" id="css" name="sukupuoli" value="Nainen">
+    <label for="css">Nainen</label><br>
+    <input type="radio" id="javascript" name="sukupuoli" value="Muu">
+    <label for="javascript">Muu</label>
+
+    <label for="css">Harrastukset:</label><br>
+
+    <input type="checkbox" id="hobbie1" name="hobbies[]" value="Nyrkkeily">
+    <label for="vehicle1"> Nyrkkeily</label><br>
+    <input type="checkbox" id="hobbie2" name="hobbies[]" value="Pöytätennis">
+    <label for="vehicle2"> Pöytätennis</label><br>
+    <input type="checkbox" id="hobbie3" name="hobbies[]" value="Fongaus" checked>
+    <label for="vehicle3"> Fongaus</label><br>
+    <input type="checkbox" id="hobbie4" name="hobbies[]" value="Neulominen">
+    <label for="vehicle3"> Neulominen</label><br>  <br>
+
+
+
+  
+    <input type="reset" value="Tyhjennä">
+    <input type="submit" value="Lähetä">
+    <input type="image" src="elon.png" alt="Submit" width="48" height="48">
+    <input type="text" id="country" name="country" value="Savonia AMK" readonly>
+</form>
+   
+</body>
+</html>
